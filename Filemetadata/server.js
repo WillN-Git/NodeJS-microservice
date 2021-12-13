@@ -13,6 +13,7 @@ app.get('/', function (req, res) {
     res.sendFile(process.cwd() + '/views/index.html');
 });
 
+//For uploading the file
 app.post('/api/fileanalyse', upload.single('upfile'), function (req, res) {
   res.json({
     "name": req.file.originalname,
